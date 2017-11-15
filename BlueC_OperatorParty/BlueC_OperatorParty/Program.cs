@@ -4,10 +4,9 @@ namespace BlueC_OperatorParty
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Geef een som in (prefix notatie)...");
 
+        private static void Parse()
+        {
             string invoer = Console.ReadLine();
 
             string[] opgesplitsteInvoer = invoer.Split(" ");
@@ -25,6 +24,18 @@ namespace BlueC_OperatorParty
                 // roep hier netjes de methode
                 // van de calculatorclass aan
                 int r = number1 + number2;
+
+                Console.WriteLine(r);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            while(true)
+            {
+                Console.WriteLine("Geef een som in (prefix notatie)...");
+
+                Parse();
             }
         }
     }
